@@ -1,0 +1,15 @@
+{
+    "name": "pilou/scrum-1",
+    "autoload": {
+        "psr-4": {
+            "Pilou\\Scrum1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pilouchicken",
+            "email": "160750509+pilouchicken@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
