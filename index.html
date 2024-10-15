@@ -4,34 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/connexion.css">
   <title>Document</title>
 </head>
 <body>
+
 
   <!-- LA BARRE DU HAUT, CHANGER LE HREF AVEC LES AUTRES PAGES-->
   
   <div class="topBar">
     <p titre>SCRUM</p>
     <p newline></p>
-    <a href="#" class="barButton">créer équipe</a>
-    <a href="#" class="barButton">joindre équipe</a>
-    <a href="#" class="barButton">se connecter</a>
+    <a href="#" class="Button">créer équipe</a>
+    <a href="#" class="Button">joindre équipe</a>
+    <a href="#" class="Button">se connecter</a>
   </div>
+
 
   <!-- LE CONTENU DE LA PAGE-->
   <div class="content">
+ 
 
 
+  <!-- PAGE DE CONNECTION-->
 
-
-
-
-
-
-
-
-
-
+  
+  <div class="connexion">
+    <form action="inscription.html" method="post">
+        <label for="email">Email :</label>
+        <input type="email" id="email" class="input" name="email" required>
+        <p space></p>
+        <label for="mot_de_passe">Mot de passe :</label>
+        <input type="password" id="mot_de_passe" class="input" name="mot_de_passe" required>
+        <p space></p>
+        <button class="Button" type="submit">Se connecter</button>
+        <a class="#" href="register.php" target="_blank" >Inscrivez-vous</a>
+        
+      </form>
+  </div>
+  
+  
 
   </div>
 
