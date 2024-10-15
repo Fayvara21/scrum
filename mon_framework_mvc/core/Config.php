@@ -3,8 +3,8 @@
 
 class Config
 {
-    const DB_HOST = 'localhost';
-    const DB_NAME = 'nom_de_la_db';
-    const DB_USER = 'utilisateur';
-    const DB_PASS = 'mot_de_passe';
+    const DB_HOST = '10.1.40.42';
+    const DB_NAME = 'Scrum';
+    const DB_USER = 'root';
+    const DB_PASS = 'ChocolatChocolaté4uChocolat';
 }
