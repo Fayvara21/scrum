@@ -4,26 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cards.css">
   <title>Scrum Cards</title>
 </head>
 <body>
 
-  <!-- LA BARRE DU HAUT, CHANGER LE HREF AVEC LES AUTRES PAGES-->
-  
+  <!-- Le menu -->
   <div class="topBar">
     <p titre>SCRUM</p>
     <p newline></p>
     <a href="#" class="Button">joindre équipe</a>
     <a href="#" class="Button">se connecter</a>
+    <a href="#" class="Button toggleCards">Afficher les cartes</a>
   </div>
-
 
   <div class="background"></div>
 
-
-  <!-- LE CONTENU DE LA PAGE-->
+  <!-- LE CONTENU DE LA PAGE -->
   <div class="content">
-    <div class="cards">
+    <div id="cards-container" class="cards">
       <!-- Carte 1 -->
       <div class="card blue-dark">
         <p>1</p>

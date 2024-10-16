@@ -1,0 +1,54 @@
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+    /* Couleurs des cartes */
+.blue-dark {
+    background-color: #1E3A8A; /* Bleu foncé */
+}
+
+.red {
+    background-color: #EF4444; /* Rouge */
+}
+
+.violet {
+    background-color: #8B5CF6; /* Violet */
+}
+
+.yellow {
+    background-color: #F59E0B; /* Jaune */
+}
+
+.green {
+    background-color: #10B981; /* Vert */
+}
+
+.blue-light {
+    background-color: #3B82F6; /* Bleu clair */
+}
