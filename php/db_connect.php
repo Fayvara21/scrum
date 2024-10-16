@@ -1,7 +1,7 @@
 <?php
-$servername = '10.1.40.42';
-$username = 'admin';
-$password = '5ucre5ucré4u5ucre';
+$servername = 'localhost';
+$username = 'root';
+$password = 'ChocolatChocolaté4uChocolat';
 $dbname = 'Scrum';
 $port = 3306;
 
