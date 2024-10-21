@@ -19,8 +19,10 @@
 
 	curl_close($ch);      
 
-	echo $response;
-
+    $data = json_decode($response);
+    echo $data;
+    echo "=========================================";
+    echo $data->id;
 
 
 ?>
