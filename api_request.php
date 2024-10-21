@@ -24,7 +24,6 @@
     echo $response;
     echo '==========================================';
     $data = json_decode($response, true);
-;
 ?>
 </body>
 </html>
