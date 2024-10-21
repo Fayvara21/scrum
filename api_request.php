@@ -22,7 +22,7 @@
 
 	curl_close($ch);      
     echo $response;
-    echo '==========================================';
+    echo '/n ==========================================';
     $data = json_decode($response, true);
 ?>
 </body>
