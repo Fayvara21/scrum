@@ -22,8 +22,10 @@
 
 	curl_close($ch);      
     echo $response;
-    echo '/n ==========================================';
     $data = json_decode($response, true);
+    foreach ($data as $x) {
+        echo "<p style='width:100px;height:100px;background-color:#20FFFF;'>".$x['fullName']."<p>";
+      }
 ?>
 </body>
 </html>
