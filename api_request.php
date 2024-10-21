@@ -9,8 +9,11 @@
 <body>
 <?php
 	$ch = curl_init();
-
-	curl_setopt($ch, CURLOPT_URL, "https://api.trello.com/1/boards/670cdbb802e7d153f9f5553f?key=0b2e7b2c9467bca4b281573eb177b77c&token=ATTA949bbd3340a9de00e9bf136eed5672c00636bcebfff1aaa7452ab178eccc2cedD4F24C3D");
+    $APIToken = "ATTA949bbd3340a9de00e9bf136eed5672c00636bcebfff1aaa7452ab178eccc2cedD4F24C3D";
+    $APIKey = "0b2e7b2c9467bca4b281573eb177b77c";
+    $url = 'https://api.trello.com/1/boards/{id}/cards?key='.$APIKey.'&token='.$APIToken;
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
+	curl_setopt($ch, CURLOPT_URL, $url);
 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -21,8 +24,7 @@
     echo $response;
     echo '==========================================';
     $data = json_decode($response, true);
-    $img = $data['prefs']['backgroundImageScaled']['1']['url'];
-    echo '<img src='.$img.' alt="hello">';
+;
 ?>
 </body>
 </html>
