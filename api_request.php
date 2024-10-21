@@ -12,7 +12,7 @@
     $APIToken = "ATTA949bbd3340a9de00e9bf136eed5672c00636bcebfff1aaa7452ab178eccc2cedD4F24C3D";
     $APIKey = "0b2e7b2c9467bca4b281573eb177b77c";
     $APIId = "670cdbb802e7d153f9f5553f";
-    $url = 'https://api.trello.com/1/boards/'.$APIId.'/cards?key='.$APIKey.'&token='.$APIToken;
+    $url = 'https://api.trello.com/1/members/me/'.$APIId.'/cards?key='.$APIKey.'&token='.$APIToken;
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
 	curl_setopt($ch, CURLOPT_URL, $url);
 
