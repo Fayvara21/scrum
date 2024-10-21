@@ -21,9 +21,7 @@
     echo $response;
     echo '==========================================';
     $data = json_decode($response, true);
-    echo $data;
-    echo '==========================================';
-    echo $data['id'];
+    echo $data['prefs'];
 
 ?>
 </body>
