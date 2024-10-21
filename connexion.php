@@ -70,7 +70,30 @@
         <a class="#" href="register.php" target="_blank" >Inscrivez-vous</a>
         
       </form>
-  
+  </div>
+
+    <!-- Liste utilisateurs-->
+
+  <div class="userList">
+    <?php
+      try {
+        $bdd = new PDO('mysql:host=localhost;dbname=Scrum', 'root', 'ChocolatChocolaté4uChocolat');
+      }
+      catch(Exception $e)
+
+      {
+        die('Erreur : '.$e->getMessage());
+      }
+
+      $reponse = $bdd->query('SELECT * FROM Utilisateur');
+
+      while ($donnees = $reponse->fetch()) {    
+        echo $donnees['Username'] . '<br />';
+      }
+      
+      $reponse->closeCursor();
+      ?>
+
 
   </div>
 
