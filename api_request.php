@@ -20,10 +20,10 @@
 	curl_close($ch);      
     echo $response;
     echo '==========================================';
-    $data = json_decode($response);
+    $data = json_decode($response, true);
     echo $data;
     echo '==========================================';
-    echo $data->id;
+    echo $data['id'];
 
 ?>
 </body>
