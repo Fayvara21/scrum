@@ -21,8 +21,8 @@
     echo $response;
     echo '==========================================';
     $data = json_decode($response, true);
-    echo $data['prefs']['backgroundImageScaled']['1']['url'];
-
+    $img = $data['prefs']['backgroundImageScaled']['1']['url'];
+    echo '<img src='.$img.' alt="hello">';
 ?>
 </body>
 </html>
