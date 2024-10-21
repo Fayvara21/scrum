@@ -70,8 +70,6 @@
         <a class="#" href="register.php" target="_blank" >Inscrivez-vous</a>
         
       </form>
-  </div>
-  
   
 
   </div>
