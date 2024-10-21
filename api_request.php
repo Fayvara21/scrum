@@ -21,7 +21,7 @@
     echo $response;
     echo '==========================================';
     $data = json_decode($response, true);
-    echo $data['prefs'];
+    echo $data['prefs']['backgroundImageScaled']['1']['url'];
 
 ?>
 </body>
