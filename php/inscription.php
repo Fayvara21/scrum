@@ -43,18 +43,19 @@
     <div class="connexion">
       <form action="register_user.php" method="post">
 
-
+        <p>Nom:</p>
         <input type="text" id="nom" name="nom" required>
 
-
+        <p>Prénom:</p>
         <input type="text" id="prenom" name="prenom" required>
 
-
+        <p>Pseudo:</p>
         <input type="text" id="pseudo" name="pseudo" required>
 
-  
+        <p>Email:</p>
         <input type="email" id="email" name="email" required>
 
+        <p>Mot De Passe:</p>
         <input type="password" id="password" name="password" required>
 
         <button type="submit">S'inscrire</button>
