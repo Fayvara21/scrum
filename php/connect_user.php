@@ -16,7 +16,7 @@
             header('Location: ../index.html');
         } else {
             //$error = 'Nom d\'utilisateur ou mot de passe incorrect';
-            echo $error;
+            //echo $error;
         }
 
     } catch (PDOException $e) {
