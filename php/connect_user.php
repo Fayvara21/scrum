@@ -3,15 +3,12 @@
     $username = $_POST['email'];
     $password = $_POST['mot_de_passe'];
     try {    
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "SELECT * FROM Utilisateur WHERE E_mail = :email AND Mdp = :mot_de_passe";
+        $query = "SELECT * FROM Utilisateur WHERE Username = :username";
         $statement = $pdo->prepare($query);
-        $statement->bindValue(':email', $username);
-        $statement->bindValue(':mot_de_passe', $password);
+        $statement->bindValue(':username', $username);
         $statement->execute();
         $user = $statement->fetch();
-        echo"try pdo";
-        if ($user) {
+        if ($user && password_verify($password, $user['Mdp'])) {
             session_start();
             $_SESSION['user'] = $user;
             echo"session started";
@@ -25,3 +22,4 @@
         echo $sql . "<br>" . $e->getMessage();
     }
     
+        
