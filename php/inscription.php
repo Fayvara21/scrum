@@ -13,7 +13,7 @@
 
 
   <?php
-  require_once './php/db_connect.php';
+  require_once '../php/db_connect.php';
   if (isset($_SESSION['user'])) {
     header('Location: ../index.html');
   }
