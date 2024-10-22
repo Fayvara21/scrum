@@ -8,7 +8,7 @@
         $statement->bindValue(':email', $email);
         $statement->execute();
         $user = $statement->fetch();
-        echo $email." ".$password."".$user['Mdp'];
+        //echo $email." ".$password."".$user['Mdp'];
         if ($user && password_verify($password, $user['Mdp'])) {
             session_start();
             $_SESSION['user'] = $user;
