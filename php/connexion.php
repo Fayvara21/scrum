@@ -13,7 +13,7 @@
   <?php
     require_once './php/db_connect.php';
     if (isset($_SESSION['user'])) {
-        header('Location: index.php');
+        header('Location: ../index.html');
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['username'];
@@ -28,7 +28,7 @@
         if ($user) {
             session_start();
             $_SESSION['user'] = $user;
-            header('Location: index.html');
+            header('Location: ../index.html');
         } else {
             $error = 'Nom d\'utilisateur ou mot de passe incorrect';
         }
@@ -54,12 +54,10 @@
  
 
 
-  <!-- PAGE DE CONNECTION-->
+  <!-- PAGE DE CONNEXION-->
 
-
-  
   <div class="connexion">
-    <form action="inscription.html" method="post">
+    <form action="connexion.php" method="post">
         <label for="email">Email :</label>
         <input type="email" id="email" class="input" name="email" required>
         <p space></p>
@@ -67,32 +65,10 @@
         <input type="password" id="mot_de_passe" class="input" name="mot_de_passe" required>
         <p space></p>
         <button class="Button" type="submit">Se connecter</button>
-        <a class="#" href="register.php" target="_blank" >Inscrivez-vous</a>
+        <a class="#" href="inscription.php" target="_blank" >Inscrivez-vous</a>
         
       </form>
   </div>
-
-    <!-- Liste utilisateurs-->
-
-  <div class="userList">
-    <?php
-      try {
-        $bdd = new PDO('mysql:host=localhost;dbname=Scrum', 'root', 'ChocolatChocolaté4uChocolat');
-      }
-      catch(Exception $e)
-
-      {
-        die('Erreur : '.$e->getMessage());
-      }
-
-      $reponse = $bdd->query('SELECT * FROM Utilisateur');
-
-      while ($donnees = $reponse->fetch()) {    
-        echo $donnees['Username'] . '<br />';
-      }
-      
-      $reponse->closeCursor();
-      ?>
 
 
   </div>
