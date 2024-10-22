@@ -23,6 +23,14 @@
   <!-- LE CONTENU DE LA PAGE -->
   <div class="content">
     <div id="cards-container" class="cards">
+      <button class="cardButton" type="button">
+
+        <!-- Carte 1 -->
+        <div class="card blue-dark">
+          <p>1</p>
+        </div>
+      </button>
+
       <!-- Carte 1 -->
       <div class="card blue-dark">
         <p>1</p>
@@ -57,6 +65,27 @@
       </div>
     </div>
   </div>
+<script>
 
+var mesCartes = document.querySelector(".cardButton");
+
+// Ajouter un event listener sur mesCartes
+
+mesCartes.addEventListener('click', function(event) {
+  console.log("Test12,12");
+  event.preventDefault();
+  console.log(event);
+},
+false,
+);
+
+// Dedans à partir du paramètre event, trouver l'objet sur lequel on a cliqué
+// commencer par le console.log 
+
+// remplacer le console log par quelquechose qui va changer sa couleur
+
+console.log(mesCartes)
+
+</script>
 </body>
 </html>

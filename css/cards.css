@@ -23,7 +23,8 @@
     text-align: center;
     transition: transform 0.3s ease;
 }
-
+.cardButton{background-color:  #0000;
+border-style: none;}
 .card:hover {
     transform: scale(1.1);
 }
