@@ -14,7 +14,6 @@
     if (isset($_SESSION['user'])) {
       header('Location: ../index.html');
     }
-    require_once '../php/connect_user.php';
   ?>
 
   <!-- LA BARRE DU HAUT, CHANGER LE HREF AVEC LES AUTRES PAGES-->
