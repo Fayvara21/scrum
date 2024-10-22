@@ -11,7 +11,7 @@ try {
     $password = password_hash($password, PASSWORD_DEFAULT);
     
     //ADAPTER PAR RAPPORT A LA BD, SUPPRIMER CE MESSAGE SI C4EST FAIT
-    $sql = " INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `profile_picture`, `email`, `password`, `active`) VALUES (NULL, '$prenom', '$nom', '$pseudo', '', '$email', '$password', '1')";
+    $sql = " INSERT INTO `Utilisateur` (`id`, `first_name`, `last_name`, `username`, `profile_picture`, `email`, `password`, `active`) VALUES (NULL, '$prenom', '$nom', '$pseudo', '', '$email', '$password', '1')";
     $pdo->exec($sql);
     echo "Nouveau compte créer";
 } catch (PDOException $e) {
