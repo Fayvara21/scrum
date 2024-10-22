@@ -6,7 +6,7 @@ $nom = $_POST['nom'];
 $pseudo = $_POST['pseudo'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$id = $POST['id'];
+$id = $_POST['id'];
 
 try {
     $password = password_hash($password, PASSWORD_DEFAULT);
