@@ -7,10 +7,10 @@
         $username = $_POST['email'];
         $password = $_POST['mot_de_passe'];
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "SELECT * FROM Utilisateur WHERE Username = :email AND Mdp = :mot_de_passe";
+        $query = "SELECT * FROM Utilisateur WHERE E_mail = :email AND Mdp = :mot_de_passe";
         $statement = $pdo->prepare($query);
-        $statement->bindValue(':username', $username);
-        $statement->bindValue(':password', $password);
+        $statement->bindValue(':email', $username);
+        $statement->bindValue(':mot_de_passe', $password);
         $statement->execute();
         $user = $statement->fetch();
         if ($user) {
