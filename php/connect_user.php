@@ -12,15 +12,15 @@
         if ($user && password_verify($password, $user['Mdp'])) {
             session_start();
             $_SESSION['user'] = $user;
-            echo"session started";
+            //echo"session started";
             header('Location: ../index.html');
         } else {
-            $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+            //$error = 'Nom d\'utilisateur ou mot de passe incorrect';
             echo $error;
         }
 
     } catch (PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
+        //echo $sql . "<br>" . $e->getMessage();
     }
     
         
