@@ -58,6 +58,9 @@
         <p>Mot De Passe:</p>
         <input type="password" id="password" name="password" required>
 
+        <p>ID utilisateur Trello</p>
+        <input type="id" id="id" name="id" required>
+
         <button type="submit">S'inscrire</button>
 
         <p>ou</p>
