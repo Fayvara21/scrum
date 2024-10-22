@@ -10,8 +10,6 @@ $id = $_POST['id'];
 
 try {
     $password = password_hash($password, PASSWORD_DEFAULT);
-    
-    //ADAPTER PAR RAPPORT A LA BD, SUPPRIMER CE MESSAGE SI C4EST FAIT
     $sql = " INSERT INTO `Utilisateur` (`id`, `Nom`, `Prenom`, `Username`, `E_mail`, `Mdp` ) VALUES ('$id', '$prenom', '$nom', '$pseudo', '$email', '$password')";
     $pdo->exec($sql);
     echo "Nouveau compte créé";

@@ -3,9 +3,9 @@
     if (isset($_SESSION['user'])) {
         header('Location: ../index.html');
     }
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $username = $_POST['email'];
+    $username = $_POST['email'];
         $password = $_POST['mot_de_passe'];
+    try {    
         $password = password_hash($password, PASSWORD_DEFAULT);
         $query = "SELECT * FROM Utilisateur WHERE E_mail = :email AND Mdp = :mot_de_passe";
         $statement = $pdo->prepare($query);
@@ -21,5 +21,7 @@
             $error = 'Nom d\'utilisateur ou mot de passe incorrect';
         }
 
+    } catch (PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
     }
     
