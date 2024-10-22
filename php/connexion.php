@@ -32,7 +32,7 @@
   <!-- PAGE DE CONNEXION-->
 
   <div class="connexion">
-    <form action="connexion.php" method="post">
+    <form action="" method="post">
         <p>Email :</p>
         <input type="email" id="email" class="input" name="email" required>
         <p space></p>
