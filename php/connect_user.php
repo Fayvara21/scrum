@@ -8,6 +8,7 @@
         $statement->bindValue(':username', $username);
         $statement->execute();
         $user = $statement->fetch();
+        echo $user;
         if ($user && password_verify($password, $user['Mdp'])) {
             session_start();
             $_SESSION['user'] = $user;
