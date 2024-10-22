@@ -2,7 +2,6 @@
     require_once '../php/db_connect.php';
     $email = $_POST['email'];
     $password = $_POST['mot_de_passe'];
-    error_reporting(E_ERROR | E_PARSE);
     try {    
         $query = "SELECT * FROM Utilisateur WHERE E_mail = :email";
         $statement = $pdo->prepare($query);
