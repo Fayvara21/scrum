@@ -10,7 +10,11 @@
 <body>
 
   <?php
-  require_once '../php/connect_user.php';
+    require_once '../php/db_connect.php';
+    if (isset($_SESSION['user'])) {
+      header('Location: ../index.html');
+    }
+    require_once '../php/connect_user.php';
   ?>
 
   <!-- LA BARRE DU HAUT, CHANGER LE HREF AVEC LES AUTRES PAGES-->
@@ -32,7 +36,7 @@
   <!-- PAGE DE CONNEXION-->
 
   <div class="connexion">
-    <form action="connect_user.php" method="post">
+    <form action="connexion.php" method="post">
         <p>Email :</p>
         <input type="email" id="email" class="input" name="email" required>
         <p space></p>
