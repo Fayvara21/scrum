@@ -14,7 +14,6 @@
     if (isset($_SESSION['user'])) {
       header('Location: ../index.html');
     }
-  else{echo 'PAS CONNECTé';}
     require_once '../php/connect_user.php';
   ?>
 
@@ -37,7 +36,7 @@
   <!-- PAGE DE CONNEXION-->
 
   <div class="connexion">
-    <form action="connexion.php" method="post">
+    <form action="connect_user.php" method="post">
         <p>Email :</p>
         <input type="email" id="email" class="input" name="email" required>
         <p space></p>
