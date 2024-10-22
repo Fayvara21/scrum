@@ -4,10 +4,10 @@
         header('Location: ../index.html');
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = $_POST['email'];
+        $password = $_POST['mot_de_passe'];
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "SELECT * FROM Utilisateur WHERE Username = :username AND Mdp = :password";
+        $query = "SELECT * FROM Utilisateur WHERE Username = :email AND Mdp = :mot_de_passe";
         $statement = $pdo->prepare($query);
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
