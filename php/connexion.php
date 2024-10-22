@@ -14,7 +14,7 @@
     if (isset($_SESSION['user'])) {
       header('Location: ../index.html');
     }
-  else{echo 'PAS CONNECTé'}
+  else{echo 'PAS CONNECTé';}
     require_once '../php/connect_user.php';
   ?>
 
