@@ -68,8 +68,17 @@
 <script>
 
 var mesCartes = document.querySelector(".cardButton");
+var mesCartes2 = document.querySelector(".cardButton");
 
 // Ajouter un event listener sur mesCartes
+
+mesCartes.addEventListener('click', function(event) {
+  console.log("Test12,12");
+  event.preventDefault();
+  console.log(event);
+},
+false,
+);
 
 mesCartes.addEventListener('click', function(event) {
   console.log("Test12,12");
