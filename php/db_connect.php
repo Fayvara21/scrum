@@ -5,6 +5,9 @@ $password = 'ChocolatChocolaté4uChocolat';
 $dbname = 'Scrum';
 $port = 3306;
 
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
 //On essaie de se connecter
 try{
     $pdo = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
