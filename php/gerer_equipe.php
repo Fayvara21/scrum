@@ -26,14 +26,16 @@
   <!-- LE CONTENU DE LA PAGE-->
   <div class="content">
 
+    <p>add user to current group</p>
 
     <?php
 
     require 'api_request.php';
     require_once 'db_connect.php';
 
+    echo '<form action="################" method="post">';
+    echo '<select name="user">';
 
-    echo '<select class="userSelect">';
     try {
       $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -50,10 +52,12 @@
       echo "connection échouée " . $e->getMessage();
     }
     echo '</select>';
-
-
+    echo '<input type="submit" value="envoyer">';
+    echo '</form>';
     ?>
 
+  
+    <p>remove user from current group</p>
 
 
 
