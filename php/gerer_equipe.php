@@ -58,7 +58,32 @@
   
     <p>remove user from current group</p>
 
+    <?php
 
+    require_once 'db_connect.php';
+
+    echo '<form action="removeuser.php" method="post">';
+    echo '<select name="user">';
+
+    try {
+      $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      $sql = "SELECT * FROM Utilisateur";
+      $statement = $conn->query($sql);
+
+      while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        echo "<option value='".$row["Id"]."'>" . htmlspecialchars($row["Username"]) . "</option>";
+      }
+
+
+    } catch (PDOException $e) {
+      echo "connection échouée " . $e->getMessage();
+    }
+    echo '</select>';
+    echo '<input type="submit" value="envoyer">';
+    echo '</form>';
+    ?>
 
 
 
