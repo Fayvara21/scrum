@@ -1,7 +1,7 @@
 <?php
-    require_once '../php/db_connect.php';
-    $email = isset($_POST['email']);
-    $password = isset($_POST['mot_de_passe']);
+    require_once 'db_connect.php';
+    $email = $_POST['email'];
+    $password = $_POST['mot_de_passe'];
     try {    
         $query = "SELECT * FROM Utilisateur WHERE E_mail = :email";
         $statement = $pdo->prepare($query);
