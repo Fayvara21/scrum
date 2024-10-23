@@ -38,7 +38,7 @@
       $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $sql = "SELECT * FROM users";
+      $sql = "SELECT * FROM Utilisateur";
       $statement = $conn->query($sql);
 
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
