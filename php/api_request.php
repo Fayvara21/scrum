@@ -85,10 +85,10 @@
         $ch = curl_init($url);
 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); 
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));  // Send data as JSON    
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));  
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',  // Set content type to JSON
+            'Content-Type: application/json',  
             'Content-Length: ' . strlen(json_encode($data))
         ));
     
@@ -99,12 +99,32 @@
 
 
     }
+    function moveCard($cardID, $listID){
 
-    $cardList = getCards();
-    setCard( $cardList[0], array('663a357f099cc40c27b3ea8f', '670cda89a1a8d52b5c88721a'));
+        global $ch;
+        global $APIKey;
+        global $APIToken;
+        
+        $url = 'https://api.trello.com/1/cards/'.$cardID.'?key='.$APIKey.'&token='.$APIToken;
 
+        $data = array("idList" => $listID);
+        $ch = curl_init($url);
 
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); 
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));  
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',  
+            'Content-Length: ' . strlen(json_encode($data))
+        ));
+    
+        $response = curl_exec($ch);
+        
+        curl_close($ch);      
+        echo $response;
 
+    }
+    
 
 ?>
 </body>
