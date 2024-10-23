@@ -15,11 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              //putDesc($_POST['card'], $_POST['select']);
              putDesc($_POST['card'], $_SESSION['user']['Id']);
              setCard( $_POST['card'], $_SESSION['user']['Id']);
-// 
+            echo $_SESSION['user'];
+             // 
         // }
 // 
     // }
 
 }
 
-header('Location: ../index.html');
+//header('Location: ../index.html');
