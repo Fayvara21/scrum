@@ -33,7 +33,7 @@
     require_once 'db_connect.php';
 
 
-
+    echo '<select class="userSelect">';
     try {
       $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -42,12 +42,14 @@
       $statement = $conn->query($sql);
 
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        echo "<option value='" . $row["Id"] . "'>" . htmlspecialchars($row["Username"]) . "</option>";
+        echo "<option value='".$row["Id"]."'>" . htmlspecialchars($row["Username"]) . "</option>";
       }
+
 
     } catch (PDOException $e) {
       echo "connection échouée " . $e->getMessage();
     }
+    echo '</select>';
 
 
     ?>
