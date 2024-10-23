@@ -11,6 +11,10 @@
 }
 
 .card {
+    
+
+}
+button{
     width: 100px;
     height: 150px;
     border-radius: 10px;
@@ -19,9 +23,11 @@
     align-items: center;
     font-size: 36px;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.459);
     text-align: center;
     transition: transform 0.3s ease;
+    border-color:#000000FF;
+    border-width: 1px;
 }
 .cardButton{background-color:  #0000;
 border-style: none;}

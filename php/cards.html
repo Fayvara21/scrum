@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/cards.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>Scrum Cards</title>
 </head>
 <body>
@@ -26,66 +25,60 @@
 
   <!-- LE CONTENU DE LA PAGE -->
   <div class="content">
-  
 
-    <script>
-      function button() {
-          var xhr = new XMLHttpRequest();
-          xhr.open("GET", "chocolat.php", true); 
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState === 4 && xhr.status === 200) {
-                  document.getElementById("response").innerHTML = xhr.responseText;
-              }
-          };
-          xhr.send(); 
-      }
-    </script>
 
 
   
   
   <div id="response" style="margin-top: 20px;">
     <!-- Response from PHP will be shown here -->
+
+
   </div>
-  
     <div id="cards-container" class="cards">
+
+
+      <form action="chocolat.php" method="post">
+
       <!-- Carte 1 -->
-      <div class="card blue-dark" id="1" onclick="button()">
-        <p>1</p>
-      </div>
+      <button class = "card blue-dark" type="submit" name="button" value="1" >
+          <p>1</p>
+      </button>
       <!-- Carte 2 -->
-      <div class="card red">
+      <button class="card red" type="submit" name="button" value="2">
         <p>2</p>
-      </div>
+      </button>
       <!-- Carte 3 -->
-      <div class="card violet">
+      <button class="card violet" type="submit" name="button" value="3">
         <p>3</p>
-      </div>
+      </button>
       <!-- Carte 5 -->
-      <div class="card yellow">
+      <button class="card yellow" type="submit" name="button" value="5">
         <p>5</p>
-      </div>
+      </button>
       <!-- Carte 8 -->
-      <div class="card green">
+      <button class="card green" type="submit" name="button" value="8">
         <p>8</p>
-      </div>
+      </button>
       <!-- Carte 13 -->
-      <div class="card blue-light">
+      <button class="card blue-light" type="submit" name="button" value="13">
         <p>13</p>
-      </div>
+      </button>
       <!-- Carte ? -->
-      <div class="card blue-dark">
+      <button class="card blue-dark" type="submit" name="button" value="?">
         <p>?</p>
-      </div>
+      </button>
       <!-- Carte Café -->
-      <div class="card red">
+      <button class="card red" type="submit" name="button" value="café">
         <p>☕</p>
-      </div>
+      </button>
+
+      </form>
+
     </div>
   </div>
 <script>
 
-var mesCartes = document.querySelector(".cardButton");
 
 // Ajouter un event listener sur mesCartes
 
@@ -96,7 +89,6 @@ var mesCartes = document.querySelector(".cardButton");
 
 // remplacer le console log par quelquechose qui va changer sa couleur
 
-console.log(mesCartes)
 
 </script>
 </body>
