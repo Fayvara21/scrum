@@ -12,5 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //header('Location: gerer_groupe.php');
         addMember("670cdbb802e7d153f9f5553f", $_POST['user']);
 
-
 }
+
+header('Location: ../index.html');

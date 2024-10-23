@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //echo $_SESSION['user_recieve'].$_SESSION['user']['id']   ;
         //header('Location: gerer_groupe.php');
         deleteMember("670cdbb802e7d153f9f5553f", $_POST['user']);
-
+        header('Location: ../index.html');
 
 }
+
+header('Location: ../index.html');
