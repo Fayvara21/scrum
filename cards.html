@@ -4,46 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/cards.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Scrum Cards</title>
 </head>
 <body>
 
-  <!-- LA BARRE DU HAUT, CHANGER LE HREF AVEC LES AUTRES PAGES-->
-  
+  <!-- Le menu -->
   <div class="topBar">
     <p titre>SCRUM</p>
     <p newline></p>
     <a href="#" class="Button">joindre équipe</a>
     <a href="#" class="Button">se connecter</a>
+    <a href="#" class="Button toggleCards">Afficher les cartes</a>
   </div>
-
 
   <div class="background"></div>
 
 
-  <!-- LE CONTENU DE LA PAGE-->
+
+
+  <!-- LE CONTENU DE LA PAGE -->
   <div class="content">
-
-    <div class="cards">
-     <div >
-
-     </div>
-
-
-    </div>
   
 
+    <script>
+      function button() {
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "chocolat.php", true); 
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                  document.getElementById("response").innerHTML = xhr.responseText;
+              }
+          };
+          xhr.send(); 
+      }
+    </script>
 
 
-
-
-
-
-
-
-
-
+  
+  
+  <div id="response" style="margin-top: 20px;">
+    <!-- Response from PHP will be shown here -->
   </div>
+  
+    <div id="cards-container" class="cards">
+      <!-- Carte 1 -->
+      <div class="card blue-dark" id="1" onclick="button()">
+        <p>1</p>
+      </div>
+      <!-- Carte 2 -->
+      <div class="card red">
+        <p>2</p>
+      </div>
+      <!-- Carte 3 -->
+      <div class="card violet">
+        <p>3</p>
+      </div>
+      <!-- Carte 5 -->
+      <div class="card yellow">
+        <p>5</p>
+      </div>
+      <!-- Carte 8 -->
+      <div class="card green">
+        <p>8</p>
+      </div>
+      <!-- Carte 13 -->
+      <div class="card blue-light">
+        <p>13</p>
+      </div>
+      <!-- Carte ? -->
+      <div class="card blue-dark">
+        <p>?</p>
+      </div>
+      <!-- Carte Café -->
+      <div class="card red">
+        <p>☕</p>
+      </div>
+    </div>
+  </div>
+<script>
 
+var mesCartes = document.querySelector(".cardButton");
+
+// Ajouter un event listener sur mesCartes
+
+
+
+// Dedans à partir du paramètre event, trouver l'objet sur lequel on a cliqué
+// commencer par le console.log 
+
+// remplacer le console log par quelquechose qui va changer sa couleur
+
+console.log(mesCartes)
+
+</script>
 </body>
 </html>
