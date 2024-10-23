@@ -10,14 +10,14 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $desc = getDesc($_POST['card']);
     $select = $_POST['select'];
-    if ((int)$desc && (int)$_POST['card']){
-        if ((int)$desc < (int)$_POST['card']){
-            putDesc($_POST['card'], $_POST['select']);
-            setCard( $_POST['card'], $_SESSION['user']['Id']);
-
-        }
-
-    }
+    // if ((int)$desc && (int)$_POST['card']){
+        // if ((int)$desc < (int)$_POST['card']){
+             putDesc($_POST['card'], $_POST['select']);
+             setCard( $_POST['card'], $_SESSION['user']['Id']);
+// 
+        // }
+// 
+    // }
 
 }
 
