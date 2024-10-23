@@ -5,8 +5,8 @@ $password = 'ChocolatChocolaté4uChocolat';
 $dbname = 'Scrum';
 $port = 3306;
 
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+error_reporting(E_ERROR | E_PARSE);
+//ini_set('display_errors', 'on');
 
 //On essaie de se connecter
 try{
@@ -18,5 +18,5 @@ try{
     /*On capture les exceptions si une exception est lancée et on affiche
      *les informations relatives à celle-ci*/
 catch(PDOException $e){
-    echo "Erreur : " . $e->getMessage();
+    //echo "Erreur : " . $e->getMessage();
 }
