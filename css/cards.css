@@ -64,9 +64,9 @@ border-style: none;}
 form{
     display:flex;
     flex-wrap: wrap;
-    margin-top: -500px;
     justify-content: center;
 }
+
 p[space]{
     width:100vw;
 }
@@ -75,4 +75,10 @@ p[space]{
     height:40px;
     margin-bottom:200px;
     margin-top:50px;
+}
+input{
+    border-radius: 100px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:20px;
 }
