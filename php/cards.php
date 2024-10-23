@@ -32,8 +32,37 @@
 
     <div id="cards-container" class="cards">
 
+
+
+
+
+
+
+
+  
+       
+
+
      
       <form action="scrum_request.php" method="post">
+
+
+
+        <?php 
+        echo '<select name="user">';
+        
+        include 'api_request.php';
+
+        $data = getCards('670cdbb802e7d153f9f5553f');
+
+        foreach ($data as $x) {
+          echo "<option value='".$x["id"]."'>".htmlspecialchars($x["name"])."</option>";
+        }
+        
+        echo '</select>';
+        
+        ?>
+
         <input name="select" id="selectedcard" value="">
         <p space></p>
         <!-- Carte 1 -->

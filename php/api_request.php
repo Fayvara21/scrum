@@ -11,7 +11,7 @@
     $APIToken = "ATTA949bbd3340a9de00e9bf136eed5672c00636bcebfff1aaa7452ab178eccc2cedD4F24C3D";
     $APIKey = "0b2e7b2c9467bca4b281573eb177b77c";
     $members = [];
-    function getMembers($boardID){
+    function getMembers($boardID): array{
         global $ch;
         global $APIKey;
         global $APIToken;
@@ -26,7 +26,7 @@
          $response = curl_exec($ch);
     
         curl_close($ch);      
-        //echo $response;
+        echo $response;
         $data = json_decode($response, true);
         foreach ($data as $x) {
             // AJOUTE LES UTILISATEURS à LA BASE DE DONNEE:
@@ -37,15 +37,14 @@
         // }
         return $members;
     }
-    function getCards(){
+    function getCards($boardID){
         global $ch;
-        global $APIId;
         global $APIKey;
         global $APIToken;
         
         $cards = array();
 
-        $url = 'https://api.trello.com/1/boards/'.$APIId.'/cards?key='.$APIKey.'&token='.$APIToken;
+        $url = 'https://api.trello.com/1/boards/'.$boardID.'/cards?key='.$APIKey.'&token='.$APIToken;
 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -57,16 +56,8 @@
         curl_close($ch);      
         //echo $response;
         $data = json_decode($response, true);
-        foreach ($data as $x){
-            if (!empty($x['idMembers']['0']) and !empty($x['idMembers']['1'])){
-                echo 'nom: '.$x['name']
-                .', idTache:'.$x['id']
-                .', délégué:'.$x['idMembers']['0'];
-            }
-            $cards[] = $x['id'];
 
-        }
-        return $cards;
+        return $data;
     }
     
     function setCard($cardID, $listUserID){
@@ -191,10 +182,31 @@
         curl_close($ch);      
         echo $response;
 
-
     }
+    function getLists($boardID){
+        global $ch;
+        global $APIKey;
+        global $APIToken;
+        
+        $cards = array();
+
+        $url = 'https://api.trello.com/1/boards/'.$boardID.'/lists?key='.$APIKey.'&token='.$APIToken;
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
+        curl_setopt($ch, CURLOPT_URL, $url);
+    
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    
+         $response = curl_exec($ch);
+    
+        curl_close($ch);      
+        //echo $response;
+        $data = json_decode($response, true);
 
 
+        return $data;
+        
+    }
 
 ?>
 </body>
