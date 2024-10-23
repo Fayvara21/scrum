@@ -193,7 +193,6 @@
 
 
     }
-    descCard('670d071bffdca2977a959c05', 'chocoalt');
 
 
 
