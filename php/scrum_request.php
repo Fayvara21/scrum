@@ -8,5 +8,5 @@ $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    descCard('670d071bffdca2977a959c05', $_POST['button']);
+    descCard('670d071bffdca2977a959c05', $_POST['select']);
 }

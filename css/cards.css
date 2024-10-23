@@ -10,10 +10,6 @@
     gap: 15px;
 }
 
-.card {
-    
-
-}
 button{
     width: 100px;
     height: 150px;
@@ -58,4 +54,9 @@ border-style: none;}
 
 .blue-light {
     background-color: #3B82F6; /* Bleu clair */
+}
+#selectedcard{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
 }

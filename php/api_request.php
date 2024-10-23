@@ -61,16 +61,8 @@
             if (!empty($x['idMembers']['0']) and !empty($x['idMembers']['1'])){
                 echo 'nom: '.$x['name']
                 .', idTache:'.$x['id']
-                .', délégué:'.$x['idMembers']['0']
-                .', assisté par:'.$x['idMembers']['1']
-                .'           ';
+                .', délégué:'.$x['idMembers']['0'];
             }
-            else{
-                echo 'nom: '.$x['name']
-                .', délégué/assisté incomplet'
-                .'           ';
-            }
-
             $cards[] = $x['id'];
 
         }
