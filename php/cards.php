@@ -46,22 +46,18 @@
      
       <form action="scrum_request.php" method="post">
 
-
-
-        <?php 
-        echo '<select name="user">';
+        <select name="card">
+          <?php
         
-        include 'api_request.php';
+            include 'api_request.php';
 
-        $data = getCards('670cdbb802e7d153f9f5553f');
+            $data = getCards('670cdbb802e7d153f9f5553f');
 
-        foreach ($data as $x) {
-          echo "<option value='".$x["id"]."'>".htmlspecialchars($x["name"])."</option>";
-        }
-        
-        echo '</select>';
-        
-        ?>
+            foreach ($data as $x) {
+              echo "<option value='" . $x["id"] . "'>" . htmlspecialchars($x["name"]) . "</option>";
+            }            
+          ?>
+        </select>
 
         <input name="select" id="selectedcard" value="">
         <p space></p>

@@ -60,14 +60,14 @@
         return $data;
     }
     
-    function setCard($cardID, $listUserID){
+    function setCard($cardID, $UserID){
         global $ch;
         global $APIKey;
         global $APIToken;
         
         $url = 'https://api.trello.com/1/cards/'.$cardID.'?key='.$APIKey.'&token='.$APIToken;
 
-        $data = array("idMembers" => $listUserID);
+        $data = array("idMembers" => $UserID);
         $ch = curl_init($url);
 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); 
@@ -159,7 +159,7 @@
         echo $response;
 
     }
-    function descCard($cardID, $desc){
+    function putDesc($cardID, $desc){
         global $ch;
         global $APIKey;
         global $APIToken;
@@ -204,10 +204,33 @@
         $data = json_decode($response, true);
 
 
-        return $data;
         
     }
+    function getDesc($cardID){
+        global $ch;
+        global $APIKey;
+        global $APIToken;
+        
+        $cards = array();
 
+        $url = 'https://api.trello.com/1/cards/'.$cardID.'?key='.$APIKey.'&token='.$APIToken;
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
+        curl_setopt($ch, CURLOPT_URL, $url);
+    
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    
+         $response = curl_exec($ch);
+    
+        curl_close($ch);      
+        //echo $response;
+        $data = json_decode($response, true);
+
+        return $data['desc'];
+
+
+    }
+    
 ?>
 </body>
 </html>
