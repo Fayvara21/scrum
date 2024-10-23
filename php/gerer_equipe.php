@@ -42,8 +42,9 @@
       $statement = $conn->query($sql);
 
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        echo "<option value='" . $row["id"] . "'>" . htmlspecialchars($row["username"]) . "</option>";
+        echo "<option value='" . $row["Id"] . "'>" . htmlspecialchars($row["Username"]) . "</option>";
       }
+
     } catch (PDOException $e) {
       echo "connection échouée " . $e->getMessage();
     }
