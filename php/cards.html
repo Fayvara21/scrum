@@ -34,8 +34,8 @@
 
      
       <form action="scrum_request.php" method="post">
-        <p id="input" value="" name="select">chocolat</p>
         <input name="select" id="selectedcard" value="">
+        <p space></p>
         <!-- Carte 1 -->
         <button class="card blue-dark" type="button" name="button" value="1">1</button>
         <!-- Carte 2 -->
@@ -53,7 +53,9 @@
         <!-- Carte Café -->
         <button class="card red" type="button" name="button" value="café">☕</button>
 
-        <button type="submit"></button>
+        <p space></p>
+
+        <button type="submit" class="submit"> SUBMIT</button>
       </form>
 
     </div>
@@ -62,12 +64,9 @@
 
   <script>
     const buttons = document.querySelectorAll('.card');
-    const card = document.getElementById('selectedcard');
     const input = document.getElementById('input');
     buttons.forEach(button => {
       button.addEventListener('click', function () {
-        card.textContent = button.value;
-        card.value = button.value;
         input.value = button.value;
       });
     });
