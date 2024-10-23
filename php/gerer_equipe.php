@@ -30,10 +30,9 @@
 
     <?php
 
-    require 'api_request.php';
     require_once 'db_connect.php';
 
-    echo '<form action="################" method="post">';
+    echo '<form action="adduser.php" method="post">';
     echo '<select name="user">';
 
     try {
