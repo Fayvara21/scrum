@@ -29,20 +29,7 @@
   <!-- LE CONTENU DE LA PAGE -->
   <div class="content">
 
-
     <div id="cards-container" class="cards">
-
-
-
-
-
-
-
-
-  
-       
-
-
      
       <form action="scrum_request.php" method="post">
 
