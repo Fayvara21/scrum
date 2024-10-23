@@ -11,6 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo $_POST['user'];
         
         //echo $_SESSION['user_recieve'].$_SESSION['user']['id']   ;
-        header('Location: messages.php');
+        header('Location: gerer_groupe.php');
 
 }
