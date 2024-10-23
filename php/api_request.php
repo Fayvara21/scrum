@@ -124,7 +124,57 @@
         echo $response;
 
     }
+
+    function addMember($boardID, $userID){
+
+        global $ch;
+        global $APIKey;
+        global $APIToken;
+        
+        $url = 'https://api.trello.com/1/boards/'.$boardID.'/members/'.$userID.'?key='.$APIKey.'&token='.$APIToken;
+
+        $data = array("type" => 'normal');
+        $ch = curl_init($url);
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); 
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));  
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',  
+            'Content-Length: ' . strlen(json_encode($data))
+        ));
     
+        $response = curl_exec($ch);
+        
+        curl_close($ch);      
+        echo $response;
+
+    }
+
+    function deleteMember($boardID, $userID){
+
+        global $ch;
+        global $APIKey;
+        global $APIToken;
+        
+        $url = 'https://api.trello.com/1/boards/'.$boardID.'/members/'.$userID.'?key='.$APIKey.'&token='.$APIToken;
+
+        $ch = curl_init($url);
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE"); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',  
+        ));
+    
+        $response = curl_exec($ch);
+        
+        curl_close($ch);      
+        echo $response;
+
+    }
+    
+    addMember('670cdbb802e7d153f9f5553f', '65006e6e0cebbeee5576c3cc')
 
 ?>
 </body>
