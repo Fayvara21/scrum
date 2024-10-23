@@ -10,15 +10,14 @@
 	$ch = curl_init();
     $APIToken = "ATTA949bbd3340a9de00e9bf136eed5672c00636bcebfff1aaa7452ab178eccc2cedD4F24C3D";
     $APIKey = "0b2e7b2c9467bca4b281573eb177b77c";
-    $APIId = "670cdbb802e7d153f9f5553f";
-
-    function getMembers(){
+    $members = [];
+    function getMembers($boardID){
         global $ch;
-        global $APIId;
         global $APIKey;
         global $APIToken;
+        global $members;
 
-        $url = 'https://api.trello.com/1/boards/'.$APIId.'/members?key='.$APIKey.'&token='.$APIToken;
+        $url = 'https://api.trello.com/1/boards/'.$boardID.'/members?key='.$APIKey.'&token='.$APIToken;
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); 
         curl_setopt($ch, CURLOPT_URL, $url);
     
@@ -31,8 +30,12 @@
         $data = json_decode($response, true);
         foreach ($data as $x) {
             // AJOUTE LES UTILISATEURS à LA BASE DE DONNEE:
-            echo $x['id'].'  ';
+            $members[] = $x["id"];
         }
+        // foreach($members as $y){
+        //     echo $y;
+        // }
+        return $members;
     }
     function getCards(){
         global $ch;
@@ -174,8 +177,7 @@
 
     }
     
-    addMember('670cdbb802e7d153f9f5553f', '65006e6e0cebbeee5576c3cc')
-
+    getMembers("670cdbb802e7d153f9f5553f");
 ?>
 </body>
 </html>
