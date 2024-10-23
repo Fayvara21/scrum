@@ -9,5 +9,4 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     descCard('670d071bffdca2977a959c05', $_POST['button']);
-
 }
