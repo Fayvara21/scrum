@@ -26,7 +26,7 @@ p[space]{height:50px}
 	max-width: 100%;
 }
 
-.input {
+.input, input{
 	font-size: 18px;
 	padding: 5px 10px;
 	width: 100%;
@@ -39,12 +39,12 @@ p[space]{height:50px}
 	transition: .3s ease;
 }
 
-.input:focus {
+.input:focus, input:focus {
 	background: #F2F2F2;
 	border: 1px solid #5A7EC7;
 	border-radius: 10px;
 }
 
-.input::placeholder {
+.input::placeholder, input::placeholder {
 	color: #DDDDDD;
 }
