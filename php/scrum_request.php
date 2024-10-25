@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // if ((int)$desc && (int)$_POST['card']){
         // if ((int)$desc < (int)$_POST['card']){
              //putDesc($_POST['card'], $_POST['select']);
-             echo (int)$desc." && ".$_POST['card'];
+             echo (int)$desc." && ".(int)$_POST['select'];
              putDesc($_POST['card'], $_POST['select']);
              setCard( $_POST['card'], $_SESSION['user']['Id']);
                 //echo $_SESSION['user']['Id'];
