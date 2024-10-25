@@ -15,7 +15,7 @@
             $_SESSION['user'] = $user;
             echo $_SESSION['user'];
             echo"session started";
-            header('Location: ../index.html');
+            //header('Location: ../index.html');
         } else {
             $error = 'Nom d\'utilisateur ou mot de passe incorrect';
             echo $error;
