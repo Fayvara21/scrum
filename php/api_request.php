@@ -85,6 +85,7 @@
 
 
     }
+    setCard('670d071385760721ddb50c7e', '65014df191a51569cbd6f2e7');
     function moveCard($cardID, $listID){
 
         global $ch;

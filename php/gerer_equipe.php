@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{
+  "address": null,
+  "attachments": [],
+  "badges": {
+    "attachmentsByType": {
+      "trello": {
+        "board": 0,
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

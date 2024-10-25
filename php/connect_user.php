@@ -13,7 +13,7 @@
         if ($user && password_verify($password, $user['Mdp'])) {
             session_start();
             $_SESSION['user'] = $user;
-
+            echo $_SESSION['user'];
             //echo"session started";
             header('Location: ../index.html');
         } else {
