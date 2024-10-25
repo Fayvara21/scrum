@@ -17,5 +17,5 @@ try{
 }
 catch(PDOException $e){
     //echo "Erreur : " . $e->getMessage();
-    header('Location: ../index.html');
+    
 }
