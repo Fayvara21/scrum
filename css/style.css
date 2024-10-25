@@ -64,3 +64,17 @@ body{
     background-position: center;
     filter: blur(10px);
 }
+.content{
+    height: 900px;
+    margin-top:-600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#FFF;
+    font-size: 18px;
+}
+p[text]{background-color: #303030;
+padding:10px;
+width:60%;
+border-radius: 15px;
+}
