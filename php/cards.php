@@ -35,7 +35,8 @@
 
         <select name="card">
           <?php
-        
+            require 'db_connect.php';
+
             include 'api_request.php';
 
             $data = getCards('670cdbb802e7d153f9f5553f');
