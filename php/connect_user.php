@@ -1,5 +1,5 @@
 <?php
-    require_once 'db_connect.php';
+    require 'db_connect.php';
     $email = $_POST['email'];
     $password = $_POST['mot_de_passe'];
     error_reporting(E_ERROR | E_PARSE);

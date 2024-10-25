@@ -15,17 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $select = $_POST['select'];
 
 
-    if ((int)$desc && (int)$_POST['card']){
-        if ((int)$desc < (int)$_POST['select']){
-            // putDesc($_POST['card'], $_POST['select']);             
+    if ((int)$desc && (int)$_POST['select']){
+        if ((int)$desc < (int)$_POST['select']){            
             putDesc($_POST['card'], $_POST['select']);
             setCard( $_POST['card'], $_SESSION['user']['Id']);
-                //echo $_SESSION['user']['Id'];
-             // 
-        // }
-// 
-    // }    
+        }
+    }    
 
 }
 
-//header('Location: ../index.html');
+header('Location: ../index.html');

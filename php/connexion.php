@@ -20,13 +20,13 @@
   ?>
 
   <!-- LA BARRE DU HAUT, CHANGER LE HREF AVEC LES AUTRES PAGES-->
-  
+  <!-- Le menu -->
   <div class="topBar">
     <p titre>SCRUM</p>
     <p newline></p>
-    <a href="#" class="Button">créer équipe</a>
-    <a href="#" class="Button">joindre équipe</a>
-    <a href="#" class="Button">se connecter</a>
+    <a href="gerer_equipe.php" class="Button">Gérer l'équipe</a>
+    <a href="connexion.php" class="Button">Se Connecter</a>
+    <a href="cards.php" class="Button toggleCards">Daily Scrum</a>
   </div>
 
 
