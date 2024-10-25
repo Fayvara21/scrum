@@ -81,7 +81,7 @@
         $response = curl_exec($ch);
         
         curl_close($ch);      
-        echo $response;
+        //echo $response;
 
 
     }
@@ -108,7 +108,7 @@
         $response = curl_exec($ch);
         
         curl_close($ch);      
-        echo $response;
+        //echo $response;
 
     }
 
@@ -134,7 +134,7 @@
         $response = curl_exec($ch);
         
         curl_close($ch);      
-        echo $response;
+        //echo $response;
 
     }
 
@@ -157,7 +157,7 @@
         $response = curl_exec($ch);
         
         curl_close($ch);      
-        echo $response;
+        //echo $response;
 
     }
     function putDesc($cardID, $desc){
@@ -181,7 +181,7 @@
         $response = curl_exec($ch);
         
         curl_close($ch);      
-        echo $response;
+        //echo $response;
 
     }
     function getLists($boardID){

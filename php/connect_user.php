@@ -2,7 +2,7 @@
     require_once 'db_connect.php';
     $email = $_POST['email'];
     $password = $_POST['mot_de_passe'];
-    //error_reporting(E_ERROR | E_PARSE);
+    error_reporting(E_ERROR | E_PARSE);
     try {    
         $query = "SELECT * FROM Utilisateur WHERE E_mail = :email";
         $statement = $pdo->prepare($query);
@@ -12,17 +12,16 @@
         //echo $email." ".$password."".$user['Mdp'];
         if ($user && password_verify($password, $user['Mdp'])) {
             session_start();
-            $_SESSION['user'] = $user;
-            echo $_SESSION['user']['Id'];
-            echo"session started";
-            //header('Location: ../index.html');
+            //$_SESSION['user'] = $user;
+            //echo"session started";
+            header('Location: ../index.html');
         } else {
-            $error = 'Nom d\'utilisateur ou mot de passe incorrect';
-            echo $error;
+            //$error = 'Nom d\'utilisateur ou mot de passe incorrect';
+            //echo $error;
         }
 
     } catch (PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
+        //echo $sql . "<br>" . $e->getMessage();
     }
     
         
