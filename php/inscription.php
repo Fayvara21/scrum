@@ -61,7 +61,7 @@
         <p>ID utilisateur Trello</p>
         <input type="id" id="id" name="id" required>
 
-        <button type="submit">S'inscrire</button>
+        <button class="Button"type="submit">S'inscrire</button>
 
         <p>ou</p>
   
