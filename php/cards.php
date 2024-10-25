@@ -41,8 +41,9 @@
             $data = getCards('670cdbb802e7d153f9f5553f');
 
             foreach ($data as $x) {
-              echo "<option value='" . $x["id"] . "'>" . htmlspecialchars($x["name"]) . "</option>";
+              echo "<option value='".$x["id"]."'>".htmlspecialchars($x["name"])."</option>";
             }            
+
           ?>
         </select>
 
